@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet"> 
+    
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>E-commerce product page | Challenge | Frontendmentor.io</title>
+</head>
+<body>
+    <div class="container">
+
+        <header>
+            <div class="hamburger-logo-group">
+                <div class="hamburger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+
+                <img src="./images/logo.svg" alt="logo icon">
+
+                <nav class="menu hidden">
+                    <div class="slide-menu">
+                        <img id="btnMenuClose" src="./images/icon-close.svg" alt="icon close">
+
+                        <ul>
+                            <li><a href="#">Collections</a></li>
+                            <li><a href="#">Men</a></li>
+                            <li><a href="#">Women</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </nav>
+
+            </div>
+
+            <div class="cart-avatar-group">
+                <div class="btnCart">
+                    <img src="./images/icon-cart.svg" alt="cart icon">
+                    <div class="cart-count hidden">3</div>
+                </div>
+
+                <img class="avatar" src="./images/image-avatar.png" alt="image avatar">
+            </div>
+
+            <div class="cart hidden">
+                <div class="cart-header">Cart</div>
+                <div class="products-in-cart">
+                    <!-- <div class="item">
+                        <img class="product-img" src="./images/image-product-1-thumbnail.jpg" alt="product 1 thumb">
+                        <div class="details">
+                            <div class="product-name">Autumn Limited Edition...</div>
+                            <div class="price-group">
+                                <div class="price">$125.00</div> x
+                                <div class="count">3</div>
+                                <div class="total-amount">$375.00</div>
+                            </div>
+                        </div>
+                        <img id="btnDelete" src="./images/icon-delete.svg" alt="icon delete">
+                    </div> -->
+                </div>
+                <div class="msg-empty">Your cart is empty.</div>
+                <div class="checkout hidden">Checkout</div>
+            </div>
+        </header>
+
+        <div class="content">
+
+            <!-- Lightbox -->
+            <section class="lightbox">
+                <img class="product-hero" src="./images/image-product-1.jpg" alt="image product">
+                <div class="previous arrow">
+                    <img src="./images/icon-previous.svg" alt="icon previous">
+                </div>
+                <div class="next arrow">
+                    <img src="./images/icon-next.svg" alt="icon next">
+                </div>
+                <div class="thumb-gallery">
+                    <div class="pic active">
+                        <img src="./images/image-product-1-thumbnail.jpg" alt="thumb-1">
+                    </div>
+                    <div class="pic">
+                        <img src="./images/image-product-2-thumbnail.jpg" alt="thumb-2">
+                    </div>
+                    <div class="pic">
+                        <img src="./images/image-product-3-thumbnail.jpg" alt="thumb-3">
+                    </div>
+                    <div class="pic">
+                        <img src="./images/image-product-4-thumbnail.jpg" alt="thumb-4">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Product -->
+            <section class="product">
+                <div class="company-name">sneaker company</div>
+                <div class="title">Fall Limited Edition Sneakers</div>
+                <div class="description">
+                    These low-profile sneakers are your perfect casual wear companion.
+                    Featuring a durable rubber outer sole, they'll withstand everything 
+                    the weather can offer.
+                </div>
+                <div class="price-wrapper">
+                    <div class="group">
+                        <div class="price">$125.00</div>
+                        <div class="discount">50%</div>
+                    </div>
+                    <div class="old-price">$250.00</div>
+                </div>
+
+                <div class="count-btn-group">
+                    <div class="counter-wrapper">
+                        <img id="btnMinus" src="./images/icon-minus.svg" alt="icon minus">
+                        <div class="counter">1</div>
+                        <img id="btnPlus" src="./images/icon-plus.svg" alt="icon plus">
+                    </div>
+
+                    <div class="btn">
+                        <img src="./images/icon-cart.svg" alt="icon cart">
+                        <p>Add to cart</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="overlay hidden">
+            <div class="btnClose">
+                <img id="btnOverlayClose" src="./images/icon-close.svg" alt="lightbox close">
+            </div>
+        </div>
+
+    </div>
+
+    <script src="./js/app.js"></script>
+</body>
+</html>

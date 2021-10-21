@@ -1,0 +1,113 @@
+.product {
+    padding: 2.0rem 2.4rem 4.4rem 2.4rem;
+
+    .company-name {
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: $orange;
+        letter-spacing: 0.18rem;
+    }
+
+    .title {
+        color: $very-dark-blue;
+        font-size: 2.8rem;
+        font-weight: 700;
+        margin-top: 1.3rem;
+        line-height: 118%;
+    }
+
+    .description {
+        font-size: 1.5rem;
+        color: $dark-grayish-blue;
+        line-height: 165%;
+        margin-top: 1.6rem;
+    }
+
+    .price-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 2rem;
+
+        .group {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+
+            .price {
+                font-size: 3rem;
+                font-weight: 700;
+            }
+
+            .discount {
+                font-size: 1.5rem;
+                font-weight: 700;
+                color: $orange;
+                background-color: $pale-orange;
+                margin-left: 1.4rem;
+                padding: 0.5rem 1rem;
+                border-radius: 0.5rem;
+            }
+        }
+
+        .old-price {
+            font-size: 1.7rem;
+            font-weight: 700;
+            color: $grayish-blue;
+            text-decoration: line-through;
+        }
+    }
+
+    .counter-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: $light-grayish-blue;
+        padding: 1.2rem 2.4rem;
+        margin-top: 2rem;
+        border-radius: 1rem;
+
+        .counter {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        #btnMinus, #btnPlus {
+            cursor: pointer;
+            padding: 1rem;
+            border-radius: 0.5rem; //optional
+
+            &:hover {
+                opacity: 0.5;
+                background-color: $pale-orange; //optional
+            }
+        }
+    }
+
+    .btn {
+        background-color: $orange;
+        color: $white;
+
+        margin-top: 1.5rem;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+
+        font-size: 1.55rem;
+        font-weight: 700;
+        border-radius: 1rem;
+
+        padding: 1.9rem;
+
+        img {
+            height: 1.5rem;
+            filter: brightness(300%);
+        }
+
+        box-shadow: 0px 20px 30px 0px $pale-orange;
+        cursor: pointer;
+    }
+}

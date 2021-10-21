@@ -1,0 +1,229 @@
+header {
+    //border: 1px solid magenta; //temporary
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 1.6rem 2.4rem 2.4rem 2rem;
+
+    position: relative;
+
+    /*position: fixed;
+    z-index: 1;
+    width: 100%;
+    background-color: $white;*/
+
+    .hamburger-logo-group {
+        //border: 1px solid blue;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 1.6rem;
+
+        .hamburger {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.3rem;
+
+            cursor: pointer;
+
+            .line {
+                background-color: $dark-grayish-blue;
+                width: 1.5rem;
+                height: 0.3rem;
+            }
+        }
+
+        .menu {
+            background-color: $black;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100vh;
+            z-index: 10;
+
+            .slide-menu {
+                background-color: $white;
+                height: 100%;
+                width: 66vw;
+
+                padding: 2.3rem;
+
+                img {
+                    transition: transform 0.5s ease;
+
+                    &:hover {
+                        cursor: pointer;
+                        transform: rotate(90deg);
+                    }
+                }
+
+                ul {
+                    margin-top: 5rem;
+                    font-size: 1.8rem;
+                    font-weight: 700;
+
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2.3rem;
+
+                    list-style: none;
+
+                    a, :active, :visited {
+                        color: $very-dark-blue;
+                        text-decoration: unset;
+
+                        &:hover {
+                            text-decoration: underline;
+                            opacity: 0.75;
+                        }
+                    }
+                }
+            }
+        }
+
+        .hidden {
+            display: none;
+        }
+    }
+
+    .cart-avatar-group {
+        //border: 1px solid green;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2.2rem;
+
+        .btnCart {
+            cursor: pointer;
+            position: relative;
+
+            .cart-count {
+                position: absolute;
+                top: -25%;
+                right: -25%;
+
+                background-color: $orange;
+                color: $white;
+
+                font-size: 1rem;
+                font-weight: 700;
+                line-height: 100%;
+
+                padding: 0.1rem 0.6rem;
+                border-radius: 1rem;
+            }
+        }
+
+        .avatar {
+            width: 2.5rem;
+            cursor: pointer;
+            border: 2px solid transparent;
+
+            &:hover {
+                border: 2px solid $orange;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    .cart {
+
+        position: absolute;
+        right: 1rem;
+        top: calc(calc(100%) + 1rem);
+        width: 35.5rem; //1rem +35.5rem + 1rem => 375px
+
+        z-index: 1;
+        background-color: $white;
+        border-radius: 1rem;
+        box-shadow: 0 1rem 1rem 1rem rgba(0,0,0, 0.1), 0 1rem 2rem 1rem rgba(0,0,0, 0.1);
+
+        .cart-header {
+            border-bottom: 1px solid $grayish-blue;
+            padding: 2.4rem 2rem;
+            font-size: 1.6rem;
+            font-weight: 700;
+        }
+
+        .products-in-cart {
+
+            .item {
+                margin: 2.4rem;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .product-img {
+                    width: 5rem;
+                    border-radius: 0.5rem;
+                }
+
+                .details {
+                    color: $dark-grayish-blue;
+                    font-size: 1.6rem;
+                    line-height: 2.6rem;
+
+                    .price-group {
+                        display: flex;
+                        gap: 0.6rem;
+
+                        .total-amount {
+                            font-weight: 700;
+                            font-size: 1.7rem;
+                            color: $black
+                        }
+                    }
+                }
+
+                #btnDelete {
+                    padding: 0.5rem;
+                    border-radius: 0.5rem;
+
+                    &:hover {
+                        cursor: pointer;
+                        background-color: $pale-orange;
+                    }
+                }
+            }
+        }
+
+        .msg-empty {
+            color: $dark-grayish-blue;
+            text-align: center;
+            font-size: 1.6rem;
+            font-weight: 700;
+
+            padding: 7.8rem 0;
+        }
+
+        .checkout {
+            background-color: $orange;
+            color: $white;
+
+            text-align: center;
+            font-size: 1.6rem;
+            font-weight: 700;
+
+            margin: 2.4rem;
+            padding: 1.8rem;
+
+            border-radius: 1rem;
+            cursor: pointer;
+        }
+
+        .hidden {
+            display: none;
+        }
+    }
+
+    .hidden {
+        display: none;
+    }
+}
